@@ -9,13 +9,12 @@
 #include "linewrite.h"
 #include "Rate.h"
 #include "Professor.h"
-#include "changerate.h"
 using namespace std;
 
 int status;
 int input;
 
-//void changerate();
+void changerate();
 void low2high();
 
 
@@ -49,7 +48,7 @@ int main()
     return 0;
 }
 
-/*void changerate()
+void changerate()
 {
         status = 0;
         double new_Diff_level, Diff_level, new_Quality, Quality, Overall;
@@ -95,7 +94,7 @@ int main()
         cout<< "prof not found, plase create new one" << endl;
         }
         
-}*/
+}
 
 void low2high()
 {
