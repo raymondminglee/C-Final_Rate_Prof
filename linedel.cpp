@@ -28,7 +28,7 @@ void linedel(string line2del)
 
         temp.close();
         fin.close();
-        cout << "line deleted"<<endl;
+        //cout << "line deleted"<<endl;
         remove("cooper_prof.txt");
         rename("temp.txt","cooper_prof.txt");
 	

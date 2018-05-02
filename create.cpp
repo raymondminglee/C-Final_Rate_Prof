@@ -22,8 +22,10 @@ void create()
         cout<< "Pleae rate the level of lecture quality"<<endl;
         cin >> Quality;
         Overall = (Diff_level+Quality)/2;
-        cout << name << " " << dept_name<< " " << Diff_level<< " " << Quality <<" "<< Overall<<" " << student_num << endl;
-        file << name << " " << dept_name<< " " << Diff_level<< " " << Quality <<" "<< Overall<<" " << student_num << endl;
+        cout << "Created "<< name << " " << dept_name<< " " 
+		<< "Difficulty " <<Diff_level<< " Quality " << Quality 
+		<<" Overall "<< Overall<<" ||Rated by " << student_num << endl;
+	file << name << " " << dept_name<< " " << Diff_level<< " " << Quality <<" "<< Overall<<" " << student_num << endl;
         file.close();
         return;
 }

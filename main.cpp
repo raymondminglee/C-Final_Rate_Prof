@@ -70,8 +70,13 @@ void changerate()
 
                         Rate R(Diff_level, Quality, Overall);
                         Professor newProf(name, R, student_num, dept_name);
-                        cout << newProf.name << " " << newProf.Rating.Diff_level<< endl;
-                        ss << newProf.name << " " << newProf.dept_name<< " " <<newProf.Rating.Diff_level<< " "<< newProf.Rating.Quality<< " " <<newProf.Rating.Overall<<" "<<newProf.student_num;
+			cout <<newProf.name<<" rating is: Difficulty "
+                                << newProf.Rating.Diff_level << " Quality " << newProf.Rating.Quality 
+				<< " Overall "<<newProf.Rating.Overall<<endl;
+
+                        ss << newProf.name << " " << newProf.dept_name<< " " 
+				<<newProf.Rating.Diff_level<< " "<< newProf.Rating.Quality<< " " 
+				<<newProf.Rating.Overall<<" "<<newProf.student_num;
                         line2del = ss.str();
                         linedel(line2del);
                         cout << "enter your rating for Difficulty"<< endl;
@@ -82,7 +87,9 @@ void changerate()
                         newProf.changeDiff(new_Diff_level, newProf.student_num);
                         newProf.changeQual(new_Quality, newProf.student_num);
                         newProf.changeOver();
-                        cout <<"new rating is: " <<newProf.Rating.Diff_level << endl;
+                        cout <<newProf.name<<" new rating is: Difficulty "
+				<< newProf.Rating.Diff_level << " Quality " << newProf.Rating.Quality << " "
+				<<newProf.Rating.Overall<<endl; 	
                         linewrite(newProf.name, newProf.Rating.Diff_level, newProf.Rating.Quality, newProf.Rating.Overall, newProf.student_num, newProf.dept_name);
                         status = 1;
                 }
@@ -121,8 +128,12 @@ void low2high()
                 }
 
                 for (auto it=ProfSet.begin(); it!=ProfSet.end(); ++it)
-                {
-                        cout<<it->name << " " <<it->Rating.Diff_level <<endl;
+                
+		{
+			 cout << it->name <<" " <<it->dept_name<<
+                                " Difficulty " <<it -> Rating.Diff_level<<
+                                " Quality " << it -> Rating.Quality<<
+                                " Overall " << it -> Rating.Overall<<endl;
                 }
         }
         else
@@ -138,7 +149,10 @@ void low2high()
                 }
                 for (auto it=ProfSet.begin(); it!=ProfSet.end(); ++it)
                 {
-                        cout << it->name <<" " <<it->dept_name<< " " <<it -> Rating.Diff_level <<endl;
+                        cout << it->name <<" " <<it->dept_name<< 
+				" Difficulty " <<it -> Rating.Diff_level<<
+				" Quality " << it -> Rating.Quality<<
+				" Overall " << it -> Rating.Overall<<endl;
                 }
         }
         main();

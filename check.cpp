@@ -23,7 +23,9 @@ void check()
                 if (search_name == name)
                 {
                 cout << "professor found" << endl;
-                cout << name << " Difficulty " << Diff_level <<" Quality "<<Quality<<" Overall "<<Overall  << " || Rated by " << student_num << " students."<<endl;
+                cout << name << " Difficulty " << Diff_level 
+			<<" Quality "<<Quality<<" Overall "<<Overall  
+			<< " || Rated by " << student_num << " students."<<endl;
                         status = 1;
 
                 }
