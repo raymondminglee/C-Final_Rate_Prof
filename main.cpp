@@ -9,6 +9,7 @@
 #include "linewrite.h"
 #include "Rate.h"
 #include "Professor.h"
+#include "diffcom.h"
 using namespace std;
 
 int status;
@@ -114,7 +115,7 @@ void low2high()
         cout<< "enter ALL for all department" <<endl;
         cin >> dept;
 
-        set<Professor> ProfSet;
+        set<Professor, Diffcomp> ProfSet;
 
         ifstream file;
         file.open("cooper_prof.txt");

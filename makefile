@@ -3,8 +3,8 @@ CC=g++
 CFLAGS = -I. 
 
 # This will create your final output using .o compiled files
-make: main.o check.o create.o linedel.o linewrite.o Rate.o Professor.o
-	$(CC) $(CFLAGS) -o main main.o check.o create.o linedel.o linewrite.o Rate.o Professor.o
+make: main.o check.o create.o linedel.o linewrite.o Rate.o Professor.o diffcom.o
+	$(CC) $(CFLAGS) -o main main.o check.o create.o linedel.o linewrite.o Rate.o Professor.o diffcom.o
 
 main.o: main.cpp check.h create.h linedel.h linewrite.h Rate.h Professor.h
 	$(CC) $(CFLAGS) -c main.cpp -o main.o
@@ -23,6 +23,8 @@ linewrite.o: linewrite.cpp linewrite.h
 	$(CC) $(CFLAGS) -c linewrite.cpp -o linewrite.o
 
 
+diffcom.o: diffcom.cpp diffcom.h Professor.o Rate.o
+	$(CC) $(CFLAG) -c diffcom.cpp -o diffcom.o Professor.o Rate.o
 Rate.o: Rate.cpp Rate.h
 	$(CC) $(CFLAGS) -c Rate.cpp -o Rate.o
 
