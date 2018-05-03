@@ -21,7 +21,7 @@ public:
     changeQual(double new_Quality, int student_num);
     changeOver();
     changenumber(int num);
-    friend bool operator< (const Professor &lhs, const Professor &rhs);
+   // friend bool operator< (const Professor &lhs, const Professor &rhs);
 };
 
 #endif

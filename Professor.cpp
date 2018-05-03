@@ -17,7 +17,7 @@ Professor::changeOver(){
 	}
 Professor::changenumber(int num) {student_num = num + 1;}
 
-bool operator< (const Professor &lhs, const Professor &rhs)
+/*bool operator< (const Professor &lhs, const Professor &rhs)
 {
         if (lhs.Rating.Diff_level < rhs.Rating.Diff_level)
                 return true;
@@ -32,6 +32,6 @@ bool operator< (const Professor &lhs, const Professor &rhs)
                 else
                         return false;
         }
-}
+}*/
 
 
