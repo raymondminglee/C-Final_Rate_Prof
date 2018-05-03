@@ -18,6 +18,45 @@ int input;
 void changerate();
 void low2high();
 
+struct Diffcmp{
+        bool operator() (const Professor &lhs, const Professor &rhs)
+        {
+                if (lhs.Rating.Diff_level < rhs.Rating.Diff_level)
+                        return true;
+                else if (lhs.Rating.Diff_level > rhs.Rating.Diff_level)
+                        return false;
+                else
+                {
+                        if(lhs.name < rhs.name)
+                                return true;
+                        else if (lhs.name > lhs.name)
+                                return false;
+                        else
+                                return false;
+                }
+        }
+};
+
+
+struct Qcmp{
+        bool operator() (const Professor &lhs, const Professor &rhs)
+        {
+                if (lhs.Rating.Quality > rhs.Rating.Quality)
+                        return true;
+                else if (lhs.Rating.Quality < rhs.Rating.Quality)
+                        return false;
+                else
+                {
+                        if(lhs.name > rhs.name)
+                                return true;
+                        else if (lhs.name < lhs.name)
+                                return false;
+                        else
+                                return false;
+                }
+        }
+};
+
 
 int main()
 {
@@ -110,13 +149,16 @@ void low2high()
         double Diff_level, Quality, Overall;
         int student_num;
         string dept, dept_name;
-
+	int input;
         cout<< "whcih department would you like to see?"<<endl;
         cout<< "enter ALL for all department" <<endl;
         cin >> dept;
-
+	cout << "how2rate"<<endl;
+	cin >> input;
+	if(input ==1)
         set<Professor, Diffcomp> ProfSet;
-
+	else if (input ==2)
+	set <Professor, Qcmp> ProfSet;
         ifstream file;
         file.open("cooper_prof.txt");
         if (dept == "ALL")
